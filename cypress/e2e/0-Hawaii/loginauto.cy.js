@@ -8,5 +8,9 @@ describe('Проверка формы логина', function() {
       cy.get('#pass').type('iLoveqastudio1');
       cy.get('#loginButton').should('not.be.disabled');
       cy.get('#loginButton').click();
+
+      cy.contains('Авторизация прошла успешно');
+      cy.get('#exitMessageButton > .exitIcon')
+      
     })
   })
