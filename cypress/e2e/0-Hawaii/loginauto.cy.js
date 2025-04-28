@@ -10,7 +10,7 @@ describe('Проверка формы логина', function() {
       cy.get('#loginButton').click();
 
       cy.contains('Авторизация прошла успешно');
-      cy.get('#exitMessageButton > .exitIcon')
+      cy.get('#exitMessageButton > .exitIcon').click()
    })
 
    it ('Негативный кейс: верный логин, неверный пароль', function() {
@@ -22,8 +22,8 @@ describe('Проверка формы логина', function() {
       cy.get('#loginButton').click();
 
       cy.contains('Такого логина или пароля нет');
-      cy.get('#exitMessageButton > .exitIcon')
-      cy.contains('Форма логина');
+      cy.get('#exitMessageButton > .exitIcon').click()
+      cy.contains('Форма логина')
 
  })
 
