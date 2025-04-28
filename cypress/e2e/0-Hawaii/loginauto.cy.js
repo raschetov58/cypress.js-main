@@ -7,5 +7,6 @@ describe('Проверка формы логина', function() {
       cy.get('#loginButton').should('be.disabled');
       cy.get('#pass').type('iLoveqastudio1');
       cy.get('#loginButton').should('not.be.disabled');
+      cy.get('#loginButton').click();
     })
   })
