@@ -22,7 +22,9 @@ describe('Проверка формы логина', function() {
       cy.get('#loginButton').click();
 
       cy.contains('Такого логина или пароля нет');
-   
+      cy.get('#exitMessageButton > .exitIcon')
+      cy.contains('Форма логина');
+
  })
 
   })
