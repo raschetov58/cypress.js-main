@@ -5,6 +5,6 @@ describe('Проверка формы логина', function() {
       cy.visit('https://login.qa.studio/');
       cy.get('#mail').type('german@dolnikov.ru');
       cy.get('#loginButton').should('be.disabled');
-      
+      cy.get('#pass').type('iLoveqastudio1');
     })
   })
